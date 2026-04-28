@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://entretelas.com.ar/</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://entretelas.com.ar/images/hero-cortinas-living-comedor.jpg</image:loc>
+      <image:caption>Living con cortinados a medida en tela natural</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://entretelas.com.ar/images/cortina-roller-blackout-dormitorio.jpg</image:loc>
+      <image:caption>Cortina roller blackout en dormitorio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://entretelas.com.ar/images/cortina-roller-screen-azul.jpg</image:loc>
+      <image:caption>Cortina roller screen color azul</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://entretelas.com.ar/images/cortinado-tela-natural-living.jpg</image:loc>
+      <image:caption>Cortinado de tela natural en living</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://entretelas.com.ar/images/cortina-combinada-roller-tela.jpg</image:loc>
+      <image:caption>Sistema combinado roller y cortinado de tela</image:caption>
+    </image:image>
+  </url>
+</urlset>
