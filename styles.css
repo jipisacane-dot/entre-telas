@@ -403,7 +403,7 @@ p { margin: 0 0 1em; }
 /* ========== Ropa de Cama ========== */
 .ropa-cama {
   padding: clamp(5rem, 10vw, 8rem) 0;
-  background: var(--bg-alt);
+  background: var(--bg);
 }
 .ropacama-grid {
   display: grid;
