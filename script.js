@@ -33,18 +33,9 @@
   const navToggle = document.querySelector('.nav-toggle');
   const siteNav = document.querySelector('.site-nav');
   if (navToggle && siteNav) {
-    // Inject overlay
     const overlay = document.createElement('div');
     overlay.className = 'nav-overlay';
     document.body.appendChild(overlay);
-
-    // Inject overlay styles
-    const ovStyle = document.createElement('style');
-    ovStyle.textContent =
-      '.nav-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:150;display:none;cursor:pointer}' +
-      '.nav-overlay.is-open{display:block}' +
-      '@media(min-width:721px){.nav-overlay{display:none!important}}';
-    document.head.appendChild(ovStyle);
 
     var _scrollY = 0;
     const openNav = function () {
@@ -134,9 +125,12 @@
     document.body.appendChild(lb);
 
     const lbImg = lb.querySelector('img');
+    // Preferir WebP si la galería tiene <picture><source srcset="...webp">
     const items = Array.from(galleryFigs).map(function (f) {
       const i = f.querySelector('img');
-      return { src: i.src, alt: i.alt };
+      const webpSource = f.querySelector('picture source[type="image/webp"]');
+      const src = webpSource ? webpSource.getAttribute('srcset') : i.src;
+      return { src: src, alt: i.alt };
     });
     let current = 0;
 
@@ -168,20 +162,5 @@
       if (e.key === 'ArrowLeft') show(current - 1);
       if (e.key === 'ArrowRight') show(current + 1);
     });
-
-    // Lightbox styles inyectados
-    const style = document.createElement('style');
-    style.textContent = `
-      .lightbox{position:fixed;inset:0;background:rgba(15,12,9,0.94);display:none;align-items:center;justify-content:center;z-index:1000;padding:2rem}
-      .lightbox.is-open{display:flex}
-      .lightbox img{max-width:min(100%,1200px);max-height:90vh;object-fit:contain;border-radius:4px;box-shadow:0 30px 80px rgba(0,0,0,0.5)}
-      .lightbox button{position:absolute;background:rgba(255,255,255,0.08);color:#fff;border:0;width:48px;height:48px;border-radius:50%;font-size:1.4rem;cursor:pointer;transition:background .3s}
-      .lightbox button:hover{background:rgba(255,255,255,0.18)}
-      .lb-close{top:1.2rem;right:1.2rem;font-size:1.8rem;line-height:1}
-      .lb-prev{left:1.2rem;top:50%;transform:translateY(-50%)}
-      .lb-next{right:1.2rem;top:50%;transform:translateY(-50%)}
-      @media(max-width:720px){.lb-prev,.lb-next{top:auto;bottom:1.2rem;transform:none}.lb-prev{left:1.2rem}.lb-next{right:1.2rem}}
-    `;
-    document.head.appendChild(style);
   }
 })();
