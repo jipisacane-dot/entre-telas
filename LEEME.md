@@ -9,7 +9,7 @@ Sitio estático ultraliviano (HTML + CSS + JS vanilla). Sin frameworks ni build 
 Formato internacional sin "+" ni espacios. Ejemplo: `5491133334444`.
 
 ### 2. Dominio real
-Reemplazar `https://entretelashome.com/` en:
+Reemplazar `https://entretelas-home.com/` en:
 - [index.html](index.html) — etiquetas `og:url`, `og:image`, `twitter:image`, `canonical`, JSON-LD
 - [sitemap.xml](sitemap.xml)
 - [robots.txt](robots.txt)
